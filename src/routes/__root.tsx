@@ -89,8 +89,10 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
+      <SmoothScroll />
       <ScrollProgress />
       <CursorSpotlight />
+      <CustomCursor />
       <SiteHeader />
       <main className="relative">
         <Outlet />
