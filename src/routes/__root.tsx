@@ -10,7 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import { ScrollProgress, SiteFooter, SiteHeader } from "@/components/site-chrome";
-import { CursorSpotlight } from "@/components/visuals";
+import { CursorSpotlight, CustomCursor, SmoothScroll } from "@/components/visuals";
 
 function NotFoundComponent() {
   return (
