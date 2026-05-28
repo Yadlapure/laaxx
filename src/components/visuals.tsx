@@ -1,25 +1,35 @@
 import { motion, useScroll, useTransform, useMotionValue, useSpring, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useRouterState } from "@tanstack/react-router";
 
 /* ---------- Lenis smooth scroll ---------- */
 export function SmoothScroll() {
+  const lenisRef = useRef<import("lenis").default | null>(null);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
   useEffect(() => {
-    let lenis: import("lenis").default | null = null;
     let raf = 0;
     let cancelled = false;
     (async () => {
       const Lenis = (await import("lenis")).default;
       if (cancelled) return;
-      lenis = new Lenis({
+      const lenis = new Lenis({
         duration: 1.2,
         easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smoothWheel: true,
       });
-      const loop = (time: number) => { lenis?.raf(time); raf = requestAnimationFrame(loop); };
+      lenisRef.current = lenis;
+      const loop = (time: number) => { lenis.raf(time); raf = requestAnimationFrame(loop); };
       raf = requestAnimationFrame(loop);
     })();
-    return () => { cancelled = true; cancelAnimationFrame(raf); lenis?.destroy(); };
+    return () => { cancelled = true; cancelAnimationFrame(raf); lenisRef.current?.destroy(); lenisRef.current = null; };
   }, []);
+
+  useEffect(() => {
+    if (lenisRef.current) lenisRef.current.scrollTo(0, { immediate: true });
+    else window.scrollTo(0, 0);
+  }, [pathname]);
+
   return null;
 }
 
