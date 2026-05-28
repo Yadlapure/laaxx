@@ -96,20 +96,23 @@ export function Hero() {
 export function StatsSection() {
   return (
     <section className="relative py-24">
-      <div className="mx-auto max-w-7xl px-6 grid gap-8 md:grid-cols-4">
-        {STATS.map((s, i) => (
-          <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-15% 0px" }}
-            transition={{ delay: i * 0.1, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}>
-            <TiltCard className="glass-strong rounded-2xl p-8 relative overflow-hidden group h-full">
-              <div className="absolute -inset-px opacity-0 group-hover:opacity-100 transition pointer-events-none rounded-2xl"
-                style={{ background: "radial-gradient(400px circle at 50% 0%, oklch(0.72 0.18 230 / 0.25), transparent 60%)" }} />
-              <div className="text-5xl md:text-6xl font-display font-semibold text-gradient">
-                <Counter to={s.value} suffix={s.suffix} />
-              </div>
-              <div className="mt-3 text-sm text-muted-foreground uppercase tracking-widest">{s.label}</div>
-            </TiltCard>
-          </motion.div>
-        ))}
+      <div className="mx-auto max-w-7xl px-6">
+        <h2 className="sr-only">By the numbers</h2>
+        <div className="grid gap-8 md:grid-cols-4">
+          {STATS.map((s, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-15% 0px" }}
+              transition={{ delay: i * 0.1, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}>
+              <TiltCard className="glass-strong rounded-2xl p-8 relative overflow-hidden group h-full">
+                <div className="absolute -inset-px opacity-0 group-hover:opacity-100 transition pointer-events-none rounded-2xl"
+                  style={{ background: "radial-gradient(400px circle at 50% 0%, oklch(0.72 0.18 230 / 0.25), transparent 60%)" }} />
+                <div className="text-5xl md:text-6xl font-display font-semibold text-gradient">
+                  <Counter to={s.value} suffix={s.suffix} />
+                </div>
+                <div className="mt-3 text-sm text-muted-foreground uppercase tracking-widest">{s.label}</div>
+              </TiltCard>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
