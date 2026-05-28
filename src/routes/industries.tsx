@@ -45,7 +45,7 @@ function Page() {
                 style={{ background: "radial-gradient(300px circle at 50% 50%, oklch(0.72 0.18 230 / 0.25), transparent 70%)" }} />
               <div className="relative">
                 <div className="text-electric text-xs uppercase tracking-widest">{`0${i + 1}`.slice(-2)}</div>
-                <h3 className="mt-3 font-display text-2xl font-semibold">{ind.name}</h3>
+                <h2 className="mt-3 font-display text-2xl font-semibold">{ind.name}</h2>
                 <p className="mt-3 text-sm text-muted-foreground">{ind.blurb}</p>
                 <Link to="/contact" className="mt-6 inline-flex items-center gap-2 text-electric text-sm">Talk to us →</Link>
               </div>

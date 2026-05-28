@@ -41,7 +41,7 @@ function Page() {
             <motion.div key={s.slug} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: (i % 2) * 0.06 }}
               className="bg-background/80 p-10 group relative">
               <div className="text-electric font-mono text-sm">{`0${i + 1}`.slice(-2)}</div>
-              <h3 className="mt-3 font-display text-3xl font-semibold">{s.title}</h3>
+              <h2 className="mt-3 font-display text-3xl font-semibold">{s.title}</h2>
               <p className="mt-3 text-muted-foreground max-w-md">{s.desc}</p>
               <ul className="mt-6 grid gap-2 text-sm">
                 <li className="flex gap-2"><span className="text-electric">◆</span> Enterprise use cases & reference architectures</li>

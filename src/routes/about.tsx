@@ -39,7 +39,7 @@ function Page() {
           {WHY.map((w, i) => (
             <div key={i} className="bg-background/80 p-8">
               <div className="text-electric text-sm font-mono">0{i + 1}</div>
-              <h3 className="mt-3 font-display text-xl font-semibold">{w.title}</h3>
+              <h2 className="mt-3 font-display text-xl font-semibold">{w.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{w.text}</p>
             </div>
           ))}
@@ -49,7 +49,7 @@ function Page() {
       <section className="relative pb-32">
         <div className="mx-auto max-w-7xl px-6 grid gap-8 md:grid-cols-2">
           <div className="glass-strong rounded-2xl p-8">
-            <h3 className="font-display text-2xl font-semibold">Registered office</h3>
+            <h2 className="font-display text-2xl font-semibold">Registered office</h2>
             <p className="mt-3 text-muted-foreground">{COMPANY.address}</p>
             <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
               <div><div className="text-muted-foreground text-xs uppercase tracking-widest">Entity</div><div className="mt-1">{COMPANY.legal}</div></div>
@@ -59,7 +59,7 @@ function Page() {
             </div>
           </div>
           <div className="glass-strong rounded-2xl p-8">
-            <h3 className="font-display text-2xl font-semibold">Work with us</h3>
+            <h2 className="font-display text-2xl font-semibold">Work with us</h2>
             <p className="mt-3 text-muted-foreground">From strategy to scale, we partner with leaders building the next decade of their business.</p>
             <div className="mt-6 flex gap-3">
               <Link to="/contact" className="rounded-full bg-cta px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow">Contact us</Link>
