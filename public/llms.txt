@@ -1,0 +1,12 @@
+# LAAXX Consulting Pvt Ltd
+
+> A modern enterprise consulting firm specializing in software services, enterprise applications, AI & data solutions, cloud transformation, digital workplace, core enterprise & zCloud, networks, and cyber resilience. We engineer the future of enterprise transformation across 11 industries.
+
+## Pages
+
+- [Home](/): Hero, services overview, stats, methodology, case studies, and testimonials.
+- [Services](/services): Software Services, Enterprise Applications, AI & Data Solutions, Cloud Transformation, Digital Workplace, Core Enterprise & zCloud, Networks, Cyber Resilience.
+- [Industries](/industries): Automotive, Technology Media & Telecom, Banking & Financial Markets, Insurance, Travel & Transportation, Chemical Oil & Gas, Manufacturing, Utilities, Government, Consumer & Retail, Healthcare.
+- [About](/about): Company story, mission, values, and leadership.
+- [Careers](/careers): Open roles and culture.
+- [Contact](/contact): Get in touch, office locations, and inquiry form.
