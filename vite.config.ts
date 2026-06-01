@@ -1,20 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
-import path from 'path'
+import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
+// @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
 export default defineConfig({
-  plugins: [
-    TanStackRouterVite({ target: 'react', autoCodeSplitting: true }),
-    react(),
-  ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
+  tanstackStart: {
+    server: { entry: "server" },
+  },
+  vite: {
+    server: {
+      port: 5173,
+      strictPort: true,
     },
   },
-  server: {
-    port: 5173,
-    strictPort: true,
-  },
-})
+});
