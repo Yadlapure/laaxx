@@ -74,7 +74,7 @@ export function Hero() {
         <div className="mt-20">
           <Marquee speed={45}>
             {KEYWORDS.map((k, i) => (
-              <span key={i} className="flex items-center gap-12 text-3xl md:text-5xl font-display font-light text-muted-foreground/70">
+              <span key={i} className="flex items-center gap-12 text-2xl sm:text-3xl md:text-5xl font-display font-light text-muted-foreground/70">
                 {k}<span className="text-electric">◆</span>
               </span>
             ))}
