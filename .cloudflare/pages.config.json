@@ -1,0 +1,9 @@
+{
+  "build": {
+    "command": "bun run build",
+    "outputDirectory": "dist/client"
+  },
+  "deploy": {
+    "command": ""
+  }
+}
