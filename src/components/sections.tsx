@@ -306,14 +306,14 @@ export function TimelineSection() {
         <SectionHead eyebrow="Methodology" title="The transformation journey, end-to-end." accent="end-to-end"
           sub="Six phases. One outcome. Measured in business value, not deliverables." />
         <div ref={ref} className="relative mt-20 mx-auto max-w-3xl">
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-white/10" />
-          <motion.div style={{ height: lineHeight }} className="absolute left-1/2 -translate-x-1/2 top-0 w-px bg-gradient-to-b from-electric via-neon to-cyan-glow shadow-glow" />
+          <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px bg-white/10" />
+          <motion.div style={{ height: lineHeight }} className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 w-px bg-gradient-to-b from-electric via-neon to-cyan-glow shadow-glow" />
           {TIMELINE.map((t, i) => (
             <motion.div key={t.step}
               initial={{ opacity: 0, x: i % 2 ? 60 : -60 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-15% 0px" }}
               transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-              className="relative mb-16 grid grid-cols-2 gap-8">
-              <div className={`${i % 2 ? "col-start-2 text-left" : "text-right"}`}>
+              className="relative mb-16 grid md:grid-cols-2 gap-8 pl-12 md:pl-0">
+              <div className={`${i % 2 ? "md:col-start-2 md:text-left" : "md:text-right"}`}>
                 <div className="glass-strong rounded-2xl p-6 inline-block max-w-sm">
                   <div className="text-xs uppercase tracking-widest text-electric">Phase {i + 1}</div>
                   <h3 className="mt-2 font-display text-2xl font-semibold">{t.step}</h3>
@@ -321,7 +321,7 @@ export function TimelineSection() {
                 </div>
               </div>
               <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-                className="absolute left-1/2 -translate-x-1/2 top-6 h-4 w-4 rounded-full bg-cta shadow-glow-neon ring-4 ring-background" />
+                className="absolute left-4 md:left-1/2 -translate-x-1/2 top-6 h-4 w-4 rounded-full bg-cta shadow-glow-neon ring-4 ring-background" />
             </motion.div>
           ))}
         </div>
