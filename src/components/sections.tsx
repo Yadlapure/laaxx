@@ -20,12 +20,6 @@ export function Hero() {
       <ParticleField />
 
       <motion.div style={{ y: yText, opacity }} className="relative mx-auto max-w-7xl px-6">
-        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
-          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-widest text-muted-foreground">
-          <span className="h-1.5 w-1.5 rounded-full bg-cyan-glow shadow-glow animate-pulse-glow" />
-          <Scramble text="AI-First Enterprise Consulting" />
-        </motion.div>
-
         <h1 className="mt-8 max-w-5xl text-balance font-display text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95] font-semibold">
           {"Engineering the Future of".split(" ").map((w, i) => (
             <span key={i} className="inline-block overflow-hidden align-bottom mr-3">

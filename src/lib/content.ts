@@ -1,10 +1,10 @@
 export const COMPANY = {
   name: "LAAXX Consulting",
   legal: "LAAXX Consulting Pvt Ltd",
-  cin: "U72900KA2024PTC000000", // dummy — replace later
-  address: "Level 12, Prestige Tech Park, Outer Ring Road, Bengaluru, Karnataka 560103, India", // dummy
-  email: "hello@laaxx.consulting",
-  phone: "+91 80 0000 0000",
+  cin: "U70200KA2025PTC208853", 
+  address: "34, Kpv Complex 1st Floor, Kilari Road, Chickpet, Bangalore, Bangalore South, Karnataka, India, 560053",
+  email: "laaxx.consulting@gmail.com",
+  phone: "+91 8904880530",
   tagline: "Engineering the Future of Enterprise Transformation",
 };
 

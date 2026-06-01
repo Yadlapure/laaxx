@@ -45,7 +45,7 @@ function Page() {
                   style={{ transform: `rotate(${deg}deg) translateX(7rem)` }} />
               ))}
             </motion.div>
-            <div className="absolute bottom-6 left-6 text-xs text-muted-foreground">Bengaluru · Mumbai · Singapore · London · NYC</div>
+            <div className="absolute bottom-6 left-6 text-xs text-muted-foreground">Bengaluru</div>
           </div>
 
           <div className="mt-8 text-sm text-muted-foreground space-y-1">
