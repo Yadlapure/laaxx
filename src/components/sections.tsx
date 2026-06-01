@@ -26,7 +26,7 @@ export function Hero() {
           <Scramble text="AI-First Enterprise Consulting" />
         </motion.div>
 
-        <h1 className="mt-8 max-w-5xl text-balance font-display text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95] font-semibold">
+        <h1 className="mt-8 max-w-5xl text-balance font-display text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95] font-semibold">
           {"Engineering the Future of".split(" ").map((w, i) => (
             <span key={i} className="inline-block overflow-hidden align-bottom mr-3">
               <motion.span
