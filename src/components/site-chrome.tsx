@@ -20,15 +20,15 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onS);
   }, []);
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
-      <div className="mx-auto max-w-7xl px-6">
-        <div className={`flex items-center justify-between rounded-2xl px-5 py-3 transition-all ${scrolled ? "glass-strong shadow-glow" : ""}`}>
-          <Link to="/" className="flex items-center gap-2 group">
+    <header className={`fixed inset-x-0 top-0 z-50 overflow-x-clip transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
+        <div className={`flex min-w-0 items-center justify-between rounded-2xl px-4 py-3 transition-all sm:px-5 ${scrolled ? "glass-strong shadow-glow" : ""}`}>
+          <Link to="/" className="group flex min-w-0 items-center gap-2">
             <div className="relative h-8 w-8 rounded-lg bg-cta shadow-glow grid place-items-center font-display font-bold text-primary-foreground text-sm">
               L
               <div className="absolute inset-0 rounded-lg bg-cta blur-md opacity-50 group-hover:opacity-80 transition" />
             </div>
-            <span className="font-display font-semibold tracking-tight text-lg">LAAXX<span className="text-electric">.</span></span>
+            <span className="truncate font-display text-lg font-semibold tracking-tight">LAAXX<span className="text-electric">.</span></span>
           </Link>
           <nav className="hidden md:flex items-center gap-1">
             {NAV.map((n) => (
@@ -48,9 +48,9 @@ export function SiteHeader() {
           </button>
         </div>
         {open && (
-          <div className="md:hidden mt-2 glass-strong rounded-2xl p-4 space-y-2 animate-in fade-in slide-in-from-top-2">
+          <div className="mt-2 w-full max-w-full overflow-hidden rounded-2xl p-4 glass-strong animate-in fade-in slide-in-from-top-2 md:hidden">
             {NAV.map((n) => (
-              <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="block px-3 py-2 rounded-lg hover:bg-white/5">{n.label}</Link>
+              <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 hover:bg-white/5">{n.label}</Link>
             ))}
           </div>
         )}
