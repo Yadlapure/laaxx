@@ -20,11 +20,11 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onS);
   }, []);
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 overflow-x-clip transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
+    <header className={`fixed inset-x-0 top-0 z-50 w-full max-w-[100dvw] overflow-x-clip touch-pan-y transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
         <div className={`flex min-w-0 items-center justify-between rounded-2xl px-4 py-3 transition-all sm:px-5 ${scrolled ? "glass-strong shadow-glow" : ""}`}>
-          <Link to="/" className="group flex min-w-0 items-center gap-2">
-            <div className="relative h-8 w-8 rounded-lg bg-cta shadow-glow grid place-items-center font-display font-bold text-primary-foreground text-sm">
+          <Link to="/" className="group flex min-w-0 max-w-[calc(100%-3rem)] items-center gap-2">
+            <div className="relative h-8 w-8 shrink-0 rounded-lg bg-cta shadow-glow grid place-items-center font-display font-bold text-primary-foreground text-sm">
               L
               <div className="absolute inset-0 rounded-lg bg-cta blur-md opacity-50 group-hover:opacity-80 transition" />
             </div>
@@ -43,12 +43,12 @@ export function SiteHeader() {
             Schedule Consultation
             <span aria-hidden>→</span>
           </Link>
-          <button onClick={() => setOpen(!open)} className="md:hidden rounded-md p-2 glass" aria-label="Menu">
+          <button onClick={() => setOpen(!open)} className="shrink-0 md:hidden rounded-md p-2 glass" aria-label="Menu">
             <div className="space-y-1.5"><span className="block h-0.5 w-5 bg-foreground" /><span className="block h-0.5 w-5 bg-foreground" /></div>
           </button>
         </div>
         {open && (
-          <div className="mt-2 w-full max-w-full overflow-hidden rounded-2xl p-4 glass-strong animate-in fade-in slide-in-from-top-2 md:hidden">
+          <div className="fixed left-4 right-4 top-20 w-auto max-w-[calc(100dvw-2rem)] overflow-hidden rounded-2xl p-4 glass-strong animate-in fade-in slide-in-from-top-2 md:hidden">
             {NAV.map((n) => (
               <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 hover:bg-white/5">{n.label}</Link>
             ))}
