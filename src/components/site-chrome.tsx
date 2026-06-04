@@ -85,6 +85,8 @@ export function SiteFooter() {
             <li><Link to="/industries" className="hover:text-electric">Industries</Link></li>
             <li><Link to="/careers" className="hover:text-electric">Careers</Link></li>
             <li><Link to="/contact" className="hover:text-electric">Contact</Link></li>
+            <li><Link to="/terms" className="hover:text-electric">Terms & Conditions</Link></li>
+            <li><Link to="/privacy" className="hover:text-electric">Privacy Policy</Link></li>
           </ul>
         </div>
         <div>
