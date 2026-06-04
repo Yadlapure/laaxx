@@ -101,8 +101,8 @@ export function SiteFooter() {
         <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} {COMPANY.legal}. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-electric">Privacy</a>
-            <a href="#" className="hover:text-electric">Terms</a>
+            <Link to="/privacy" className="hover:text-electric">Privacy</Link>
+            <Link to="/terms" className="hover:text-electric">Terms</Link>
             <a href="#" className="hover:text-electric">Security</a>
             <a href="#" className="hover:text-electric">ISO 27001</a>
           </div>
