@@ -28,7 +28,7 @@ export function SiteHeader() {
               L
               <div className="absolute inset-0 rounded-lg bg-cta blur-md opacity-50 group-hover:opacity-80 transition" />
             </div>
-            <span className="truncate font-display text-lg font-semibold tracking-tight">LAAXX<span className="text-electric">.</span></span>
+            <span className="truncate font-display text-lg font-semibold tracking-tight">Laaxx Consulting<span className="text-electric">.</span></span>
           </Link>
           <nav className="hidden md:flex items-center gap-1">
             {NAV.map((n) => (
